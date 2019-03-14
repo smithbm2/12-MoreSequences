@@ -600,11 +600,13 @@ def fancy_polygon(window, circle, number_of_lines, hops_to_next_point, color,
             newline = rg.Line(sequence[k], sequence[k + hops_to_next_point])
             newline.thickness = thickness
             newline.color = color
+            newline.arrow = 'last'
             newline.attach_to(window)
         else:
             newline = rg.Line(sequence[k], sequence[k - ((len(sequence)) - hops_to_next_point)])
             newline.thickness = thickness
             newline.color = color
+            newline.arrow = 'last'
             newline.attach_to(window)
     window.render()
 
